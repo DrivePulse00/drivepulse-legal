@@ -12,6 +12,10 @@
         .faq-question { font-weight: bold; color: #007AFF; }
         .setup-steps { background: #f9f9f9; padding: 20px; border-radius: 8px; }
         code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+        .warning { background: #fff5f5; border-left: 5px solid #d00000; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+        .warning h2 { color: #b00000; border: none; margin-top: 0; }
+        .warning ul { margin: 10px 0; }
+        .disclaimer { font-size: 0.92em; color: #555; background: #f9f9f9; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -20,10 +24,11 @@
     <h2>Guida Rapida all'avvio</h2>
     <div class="setup-steps">
         <ol>
-            <li>Inserisci il tuo adattatore <strong>OBD2 Bluetooth BLE</strong> nella porta diagnostica della tua auto (solitamente sotto il volante).</li>
-            <li>Accendi il quadro o metti in moto l'auto.</li>
-            <li>Apri DrivePulse sul tuo iPhone e vai in <strong>Impostazioni > Gestisci Connessione</strong>.</li>
-            <li>Seleziona il tuo adattatore dalla lista (se richiesto, inserisci il PIN stampato sull'adattatore).</li>
+            <li>Inserisci il tuo adattatore <strong>OBD2 (Bluetooth BLE o WiFi)</strong> nella porta diagnostica della tua auto (solitamente sotto il volante).</li>
+            <li>Accendi il quadro o metti in moto l'auto (sempre <strong>a veicolo fermo</strong>).</li>
+            <li>Apri DrivePulse sul tuo telefono e vai nella schermata <strong>Collega</strong>.</li>
+            <li><strong>Bluetooth (BLE):</strong> tocca "Cerca dispositivi" e seleziona l'adattatore (se richiesto, inserisci il PIN stampato sull'adattatore).<br>
+                <strong>WiFi:</strong> unisciti prima alla rete WiFi dell'adattatore dalle impostazioni del telefono (es. "WiFi_OBDII", "VLINK"), poi scegli "WiFi" e tocca "Connetti" (host/porta predefiniti, es. 192.168.0.10:35000).</li>
             <li>Una volta connesso, DrivePulse inizierà a ricevere i dati!</li>
         </ol>
     </div>
@@ -32,7 +37,7 @@
 
     <div class="faq-item">
         <div class="faq-question">Quali adattatori sono compatibili?</div>
-        <div class="faq-answer">DrivePulse supporta adattatori <strong>Bluetooth Low Energy (BLE)</strong> basati sul chip ELM327. Consigliamo modelli di qualità come Vgate iCar Pro BLE, Veepeak OBDCheck BLE+ o simili. Gli adattatori Wi-Fi o Bluetooth "Classico" (non-BLE) non sono supportati.</div>
+        <div class="faq-answer">DrivePulse supporta adattatori <strong>Bluetooth Low Energy (BLE)</strong> e adattatori <strong>WiFi</strong> basati sul chip ELM327. Consigliamo modelli di qualità come Vgate iCar Pro BLE, Veepeak OBDCheck BLE+ o equivalenti WiFi. Gli adattatori Bluetooth "Classico" (non-BLE) non sono supportati. <em>Suggerimento: scollega l'adattatore dalla presa OBD quando non lo usi, perché alcuni modelli economici possono scaricare la batteria del veicolo se lasciati inseriti.</em></div>
     </div>
 
     <div class="faq-item">
@@ -60,7 +65,23 @@
         <div class="faq-answer">Per motivi di sicurezza, DrivePulse è in <strong>sola lettura</strong>. Legge e spiega i codici di errore ma non permette di cancellarli. Per la cancellazione dei codici e la riparazione del veicolo, rivolgiti sempre a un professionista.</div>
     </div>
 
+    <div class="warning">
+        <h2>⚠️ Sicurezza e uso responsabile (leggi attentamente)</h2>
+        <ul>
+            <li><strong>Non guardare e non usare MAI il telefono mentre guidi.</strong> Imposta e consulta DrivePulse <strong>solo a veicolo fermo</strong>, in sicurezza. La lettura dei dati in tempo reale è pensata per essere consultata da fermi; le viste di guida (CarPlay/Android Auto) limitano apposta le informazioni in marcia.</li>
+            <li><strong>Il conducente è l'unico responsabile</strong> della guida sicura, del rispetto del Codice della Strada e delle leggi locali, incluse quelle sull'uso del telefono alla guida. In molti Paesi guardare o maneggiare il telefono mentre si guida è <strong>vietato e sanzionato</strong>.</li>
+            <li><strong>DrivePulse è solo informativo, NON sostituisce un meccanico.</strong> I valori mostrati (consumi, diagnosi, autonomia, salute, codici errore) sono <strong>stime a scopo informativo</strong> e non costituiscono una diagnosi professionale né una consulenza tecnica. Per riparazioni, sicurezza del veicolo e cancellazione dei codici, rivolgiti sempre a un professionista qualificato.</li>
+            <li><strong>Sola lettura.</strong> DrivePulse comunica con la centralina in <strong>sola lettura</strong> (comandi standard SAE J1979) e <strong>non modifica, non cancella e non scrive</strong> mai alcun parametro del veicolo.</li>
+            <li><strong>Adattatore OBD2 di terze parti.</strong> L'adattatore non è prodotto da noi: non siamo responsabili del suo funzionamento, della qualità dei dati che fornisce o di eventuali effetti sul veicolo. Usa adattatori di qualità e scollegali quando non servono.</li>
+        </ul>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Limitazione di responsabilità.</strong> DrivePulse è fornita "così com'è" e "come disponibile", senza garanzie di alcun tipo, esplicite o implicite, inclusa l'idoneità a uno scopo specifico, l'accuratezza o la completezza dei dati. Nei limiti massimi consentiti dalla legge applicabile, lo sviluppatore non sarà responsabile per alcun danno diretto, indiretto, incidentale, consequenziale o di altro tipo — inclusi danni a cose o persone, guasti al veicolo, perdita di dati o mancati guadagni — derivanti dall'uso o dall'impossibilità di usare l'app, o dall'affidamento alle informazioni in essa contenute. Usando DrivePulse accetti queste condizioni e ti assumi ogni rischio connesso all'uso. Nulla in questo documento esclude o limita responsabilità che non possano essere escluse o limitate per legge (es. dolo o colpa grave, o diritti inderogabili del consumatore).
+    </div>
+
     <h2>Contattaci</h2>
     <p>Se hai problemi tecnici o suggerimenti, scrivi a: <strong>drivepulse00@proton.me</strong></p>
+    <p style="font-size:0.85em;color:#888;">Ultimo aggiornamento: Giugno 2026</p>
 </body>
 </html>
