@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - DrivePulse</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #007AFF; }
+        h2 { color: #555; margin-top: 30px; }
+        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .faq-question { font-weight: bold; color: #007AFF; }
+        .setup-steps { background: #f9f9f9; padding: 20px; border-radius: 8px; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+        .warning { background: #fff5f5; border-left: 5px solid #d00000; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+        .warning h2 { color: #b00000; border: none; margin-top: 0; }
+        .warning ul { margin: 10px 0; }
+        .disclaimer { font-size: 0.92em; color: #555; background: #f9f9f9; padding: 16px 18px; border-radius: 8px; margin: 20px 0; }
+        .lang { font-size: 0.9em; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="lang"><a href="support.html">🇮🇹 Italiano</a> · <strong>🇬🇧 English</strong></div>
+    <h1>DrivePulse Support</h1>
+
+    <h2>Quick Start</h2>
+    <div class="setup-steps">
+        <ol>
+            <li>Plug your <strong>OBD2 adapter (Bluetooth BLE or WiFi)</strong> into the car's diagnostic port (usually under the steering wheel).</li>
+            <li>Turn the ignition on or start the engine (always <strong>with the vehicle stopped</strong>).</li>
+            <li>Open DrivePulse on your phone and go to the <strong>Connect</strong> screen.</li>
+            <li><strong>Bluetooth (BLE):</strong> tap "Search devices" and select the adapter (if prompted, enter the PIN printed on the adapter).<br>
+                <strong>WiFi:</strong> first join the adapter's WiFi network from your phone settings (e.g. "WiFi_OBDII", "VLINK"), then choose "WiFi" and tap "Connect" (default host/port, e.g. 192.168.0.10:35000).</li>
+            <li>Once connected, DrivePulse will start receiving data!</li>
+        </ol>
+    </div>
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">Which adapters are compatible and which do you recommend?</div>
+        <div class="faq-answer">DrivePulse supports <strong>Bluetooth Low Energy (BLE)</strong> and <strong>WiFi</strong> adapters based on the <strong>ELM327</strong> chip.<br>
+        <strong>Recommended (iOS and Android): a BLE adapter with auto-sleep</strong>, e.g. <strong>Vgate iCar Pro BLE 4.0</strong> or <strong>Veepeak OBDCheck BLE+</strong>. Why: <strong>BLE uses very little power</strong> on the phone and these models <strong>turn themselves off</strong> when the engine is off, so you can <strong>leave them plugged in without draining the car battery</strong>.<br>
+        <strong>WiFi</strong> adapters work too (handy on Android or if you already own one), but usually have a higher standby draw: if you leave one plugged in, <strong>unplug it</strong> when you won't drive for a few days.<br>
+        <strong>Classic Bluetooth</strong> (non-BLE) adapters are not supported.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Automatic trip tracking doesn't start, what should I do?</div>
+        <div class="faq-answer">Make sure you granted the <strong>"Always"</strong> location permission. DrivePulse detects movement and engine RPM in the background; without "Always", iOS will close the app when the phone is locked.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Does the app use a lot of battery?</div>
+        <div class="faq-answer">The app is optimized to minimize consumption. GPS is only activated when the engine is detected as running via Bluetooth. However, on long trips the combined use of Bluetooth and GPS can affect the battery: we recommend keeping the phone charging if possible.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">How does the trial work?</div>
+        <div class="faq-answer">You get 7 days of full access to all features from first launch. After 7 days, you'll need a one-time In-App purchase to keep using the app. It's not a subscription: you pay once and DrivePulse is yours forever.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">I changed iPhone. How do I restore my license?</div>
+        <div class="faq-answer">Open DrivePulse, go to the purchase screen and tap <strong>"Restore Purchases"</strong>. By signing in with the same Apple ID used for the original purchase, the license will be restored automatically at no extra cost.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">Can I clear fault codes (DTC)?</div>
+        <div class="faq-answer">For safety, DrivePulse is <strong>read-only</strong>. It reads and explains fault codes but does not allow clearing them. For clearing codes and repairing the vehicle, always consult a professional.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">When does DrivePulse connect automatically to the adapter?</div>
+        <div class="faq-answer">DrivePulse tries to reconnect on its own to the already-paired adapter, with a behavior designed to <strong>avoid heating the phone or draining the battery</strong>:
+        <ul>
+            <li><strong>App open (foreground):</strong> if the adapter is plugged in and the ignition is on, the connection starts/resumes within seconds (retries ~every 30 seconds).</li>
+            <li><strong>App in background (phone in pocket/locked, app not closed):</strong> it keeps retrying but less often (~every 2–3 minutes) to save power. As soon as you reopen the app, the connection becomes immediate.</li>
+            <li><strong>App closed (swiped away):</strong> it won't reconnect by itself — reopen it to reconnect.</li>
+        </ul>
+        For automatic connection and background trip tracking you need <strong>Bluetooth on</strong> (or the adapter's WiFi network, if you use a WiFi model) and the <strong>"Always" location</strong> permission. If reconnection with the phone in your pocket is a bit slow, that's intentional: we prioritize battery life; with the app open it's always fast.</div>
+    </div>
+
+    <div class="warning">
+        <h2>⚠️ Safety and responsible use (read carefully)</h2>
+        <ul>
+            <li><strong>NEVER look at or use the phone while driving.</strong> Set up and check DrivePulse <strong>only when the vehicle is stopped</strong>, safely. Real-time data is meant to be consulted while stationary; the driving views (CarPlay/Android Auto) deliberately limit information while moving.</li>
+            <li><strong>The driver is solely responsible</strong> for safe driving and for complying with traffic laws and local regulations, including those on phone use while driving. In many countries looking at or handling the phone while driving is <strong>prohibited and fined</strong>.</li>
+            <li><strong>DrivePulse is informational only and does NOT replace a mechanic.</strong> The values shown (fuel economy, diagnostics, range, health, fault codes) are <strong>informational estimates</strong> and do not constitute a professional diagnosis or technical advice. For repairs, vehicle safety and clearing codes, always consult a qualified professional.</li>
+            <li><strong>Read-only.</strong> DrivePulse communicates with the ECU in <strong>read-only</strong> mode (standard SAE J1979 commands) and <strong>never modifies, clears or writes</strong> any vehicle parameter.</li>
+            <li><strong>Third-party OBD2 adapter.</strong> The adapter is not made by us: we are not responsible for its operation, the quality of the data it provides, or any effects on the vehicle. Use quality adapters and unplug them when not needed.</li>
+        </ul>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Limitation of liability.</strong> DrivePulse is provided "as is" and "as available", without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy or completeness of the data. To the maximum extent permitted by applicable law, the developer shall not be liable for any direct, indirect, incidental, consequential or other damages — including damage to property or persons, vehicle breakdowns, data loss or lost profits — arising from the use of, or inability to use, the app, or from reliance on the information it contains. By using DrivePulse you accept these terms and assume all risk associated with its use. Nothing in this document excludes or limits liability that cannot be excluded or limited by law (e.g. wilful misconduct or gross negligence, or non-waivable consumer rights). DrivePulse encourages eco-friendly and safe driving through the pursuit of ecological goals.
+    </div>
+
+    <h2>Contact us</h2>
+    <p>For technical issues or suggestions, write to: <strong>drivepulse00@proton.me</strong></p>
+    <p style="font-size:0.85em;color:#888;">Last updated: June 2026</p>
+</body>
+</html>
