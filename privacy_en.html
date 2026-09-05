@@ -1,57 +1,619 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - DrivePulse</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #007AFF; }
-        h2 { border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 30px; }
-        .highlight { background: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 5px solid #007AFF; }
-        .lang { font-size: 0.9em; margin-bottom: 10px; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy - DrivePulse</title>
+<link rel="alternate" hreflang="it" href="privacy.html">
+<link rel="alternate" hreflang="en" href="privacy_en.html">
+<link rel="alternate" hreflang="de" href="privacy_de.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+<style>:root {
+    --blu: #001E50;
+    --azzurro: #00B0F0;
+    --verde: #00A878;
+    --ambra: #F2C400;
+
+    --fondo: #F5F6FA;
+    --superficie: #FFFFFF;
+    --testo: #0C1630;
+    --testo-tenue: #56607D;
+    --bordo: #DDE1EC;
+    --riga: #E7EAF3;
+
+    --titolo: var(--blu);
+    --link: #0076A8;
+    --ombra: 0 1px 2px rgba(0, 30, 80, .06), 0 8px 24px -12px rgba(0, 30, 80, .18);
+
+    --passo: clamp(1.25rem, 4vw, 2rem);
+    --colonna: 68rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fondo: #0A0E1A;
+      --superficie: #161B2E;
+      --testo: #E4E7F2;
+      --testo-tenue: #98A1BC;
+      --bordo: #262D45;
+      --riga: #222941;
+      --titolo: #E4E7F2;
+      --link: #4A85E0;
+      --azzurro: #4AC6F5;
+      --verde: #2BC08F;
+      --ombra: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --fondo: #0A0E1A;
+    --superficie: #161B2E;
+    --testo: #E4E7F2;
+    --testo-tenue: #98A1BC;
+    --bordo: #262D45;
+    --riga: #222941;
+    --titolo: #E4E7F2;
+    --link: #4A85E0;
+    --azzurro: #4AC6F5;
+    --verde: #2BC08F;
+    --ombra: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -12px rgba(0, 0, 0, .7);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--testo);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .involucro {
+    max-width: var(--colonna);
+    margin: 0 auto;
+    padding-inline: var(--passo);
+  }
+
+  /* ---------- apertura ---------- */
+
+  .apertura {
+    position: relative;
+    overflow: hidden;
+    background: var(--blu);
+    color: #FFFFFF;
+    padding-block: clamp(2.5rem, 8vw, 4.5rem) clamp(3rem, 8vw, 4.5rem);
+  }
+
+  .quadrante {
+    position: absolute;
+    inset: auto -18% -62% auto;
+    width: min(46rem, 118%);
+    aspect-ratio: 1;
+    pointer-events: none;
+    opacity: .55;
+  }
+
+  .quadrante circle { fill: none; stroke-linecap: round; }
+
+  .apertura .involucro { position: relative; }
+
+  .marchio {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -.01em;
+    margin-bottom: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  .marchio img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    flex: none;
+  }
+
+  .apertura h1 {
+    font-size: clamp(2.3rem, 7.2vw, 3.75rem);
+    line-height: 1.06;
+    letter-spacing: -.035em;
+    font-weight: 800;
+    margin: 0 0 1.1rem;
+    text-wrap: balance;
+    max-width: 17ch;
+  }
+
+  .apertura h1 em { font-style: normal; color: var(--azzurro); }
+
+  .occhiello {
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--azzurro);
+    margin: 0 0 1.25rem;
+  }
+
+  .sommario {
+    font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+    line-height: 1.55;
+    color: #C3CEE6;
+    max-width: 46ch;
+    margin: 0 0 2rem;
+  }
+
+  .azioni {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+  }
+
+  .bottone {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: #FFFFFF;
+    color: var(--blu);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .85rem 1.4rem;
+    border-radius: 10px;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+
+  .bottone:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .55); }
+  .bottone svg { flex: none; }
+
+  .postilla { font-size: .92rem; color: #9FB0D0; margin: 0; }
+
+  .schermata { margin-top: clamp(2.5rem, 7vw, 3.5rem); max-width: 20rem; }
+
+  .schermata img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    box-shadow: 0 24px 60px -24px rgba(0, 0, 0, .75);
+  }
+
+  .pratica {
+    font-size: .97rem;
+    color: #9FB0D0;
+    max-width: 46ch;
+    margin: -1rem 0 2rem;
+  }
+
+  /* ---------- galleria ---------- */
+
+  .galleria {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+  }
+
+  .galleria figure {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 170px;
+    scroll-snap-align: start;
+    display: grid;
+    gap: .6rem;
+  }
+
+  .galleria img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--bordo);
+    background: var(--superficie);
+  }
+
+  .galleria figcaption {
+    font-size: .82rem;
+    color: var(--testo-tenue);
+    text-wrap: balance;
+  }
+
+  /* ---------- sezioni ---------- */
+
+  section { padding-block: clamp(3rem, 8vw, 5rem); }
+
+  .titolo-sezione {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: -.025em;
+    font-weight: 700;
+    color: var(--titolo);
+    margin: 0 0 .6rem;
+    text-wrap: balance;
+  }
+
+  .intro-sezione {
+    color: var(--testo-tenue);
+    max-width: 56ch;
+    margin: 0 0 2.5rem;
+  }
+
+  /* ---------- la funzione principale ---------- */
+
+  .principale {
+    background: var(--superficie);
+    border: 1px solid var(--bordo);
+    border-radius: 16px;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    box-shadow: var(--ombra);
+    display: grid;
+    gap: 1.1rem;
+    margin-bottom: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  .principale h3 {
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+    letter-spacing: -.02em;
+    font-weight: 700;
+    color: var(--titolo);
+    margin: 0;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+
+  .principale p { margin: 0; max-width: 58ch; }
+
+  .valori {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    list-style: none;
+    padding: 0;
+    margin: .25rem 0 0;
+  }
+
+  .valori li {
+    font-size: .88rem;
+    font-weight: 500;
+    color: var(--testo-tenue);
+    border: 1px solid var(--bordo);
+    border-radius: 999px;
+    padding: .28rem .8rem;
+  }
+
+  /* ---------- le altre funzioni: elenco, non riquadri ---------- */
+
+  .elenco { display: grid; }
+
+  .elenco > div {
+    display: grid;
+    gap: .3rem;
+    padding: 1.35rem 0;
+    border-top: 1px solid var(--riga);
+  }
+
+  @media (min-width: 46rem) {
+    .elenco > div {
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: 0 2.5rem;
+      align-items: baseline;
+    }
+  }
+
+  .elenco h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: -.012em;
+    color: var(--titolo);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .elenco p { margin: 0; color: var(--testo-tenue); max-width: 52ch; }
+
+  /* ---------- stampa ---------- */
+
+  .stampa { display: grid; gap: 1rem; }
+
+  @media (min-width: 52rem) {
+    .stampa { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+
+  .stampa article {
+    background: var(--superficie);
+    border: 1px solid var(--bordo);
+    border-left: 3px solid var(--azzurro);
+    border-radius: 4px 14px 14px 4px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+
+  .stampa p { margin: 0; font-size: 1rem; line-height: 1.5; }
+
+  .stampa .firma {
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--testo-tenue);
+    margin-top: auto;
+  }
+
+  .stampa a { color: var(--link); }
+
+  /* ---------- adattatore ---------- */
+
+  .adattatore {
+    border-top: 1px solid var(--riga);
+    padding-top: clamp(2rem, 5vw, 2.5rem);
+    display: grid;
+    gap: .7rem;
+    max-width: 58ch;
+  }
+
+  .adattatore h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -.015em;
+    color: var(--titolo);
+    margin: 0;
+  }
+
+  .adattatore p { margin: 0; color: var(--testo-tenue); }
+  .adattatore a { color: var(--link); }
+
+  /* ---------- chiusura ---------- */
+
+  .chiusura {
+    background: var(--blu);
+    color: #FFFFFF;
+    padding-block: clamp(3rem, 8vw, 4.5rem);
+  }
+
+  .chiusura h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: -.025em;
+    margin: 0 0 .75rem;
+    text-wrap: balance;
+  }
+
+  .chiusura p { color: #C3CEE6; max-width: 46ch; margin: 0 0 2rem; }
+
+  .recapiti {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem 2rem;
+    padding-top: 2rem;
+    margin-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, .16);
+    font-size: .95rem;
+  }
+
+  .recapiti a { color: #FFFFFF; text-decoration-color: rgba(255, 255, 255, .45); }
+  .recapiti span { color: #9FB0D0; }
+
+  a:focus-visible, .bottone:focus-visible {
+    outline: 2px solid var(--azzurro);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+  /* ====================================================================
+     AGGIUNTA (Jim, 05/09/2026 20:20, su ordine di god) - quattro regole
+     per le pagine legali, che con la landing condividono il vestito.
+
+     Non modificano NIENTE di quello che c'e' sopra: sono quattro nomi
+     nuovi. Le usano privacy.html e support.html nelle tre lingue.
+
+     Perche' esistono, una per una, e' scritto sopra ognuna. La quinta
+     che serviva (la riga «ultimo aggiornamento») non e' qui apposta: si
+     scrive dentro l'apertura, dove `.postilla` vive gia'.
+     ==================================================================== */
+
+  /* 1. Lo switch di lingua. La landing e' una pagina sola in italiano; le
+        pagine legali sono tre che si rimandano, e quella riga non aveva
+        niente a cui appoggiarsi. Sta dentro l'apertura, sul blu, quindi i
+        colori sono quelli dell'apertura e non quelli del corpo. */
+  .lingue {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem .9rem;
+    font-size: .92rem;
+    margin-bottom: clamp(1.5rem, 5vw, 2.25rem);
+  }
+
+  .lingue a { color: #C3CEE6; text-decoration-color: rgba(255, 255, 255, .35); }
+  .lingue a:hover { color: #FFFFFF; }
+  .lingue strong { color: #FFFFFF; font-weight: 600; }
+  .lingue span { color: #6F80A6; }
+
+  /* 2. Il riquadro d'avvertimento. E' `.principale` con un accento, non un
+        riquadro nuovo: stessa forma, stessa ombra, stesso raggio. Serve
+        perche' nelle pagine legali c'e' un punto solo che parla di un
+        rischio fisico (non guardare il telefono mentre guidi) e deve
+        staccarsi dal resto senza gridare. */
+  .avviso {
+    /* Il rosso sta QUI e non in `:root`, per non toccare un blocco che
+       c'e' gia'. Le tre condizioni sono le stesse del resto del foglio:
+       chiaro, scuro di sistema, scuro scelto a mano. */
+    --rosso: #C42B2B;
+    background: var(--superficie);
+    border: 1px solid var(--bordo);
+    border-left: 4px solid var(--rosso);
+    border-radius: 16px;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    box-shadow: var(--ombra);
+    display: grid;
+    gap: 1.1rem;
+    margin-bottom: clamp(2rem, 5vw, 2.75rem);
+  }
+
+  .avviso h3 {
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    letter-spacing: -.02em;
+    font-weight: 700;
+    color: var(--titolo);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .avviso p { margin: 0; max-width: 58ch; }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .avviso { --rosso: #F0736B; }
+  }
+
+  :root[data-theme="dark"] .avviso { --rosso: #F0736B; }
+
+  /* 3. I collegamenti dentro la prosa. Nel foglio ogni regola sui link e'
+        agganciata a una sezione (`.stampa a`, `.adattatore a`,
+        `.recapiti a`): un testo legale ha invece link IN MEZZO alle frasi,
+        e senza questa riga uscirebbero come li fa il browser. E' scoperta
+        su una classe nuova, e non su `main a`, proprio per non toccare il
+        rendering della landing. */
+  .prosa a { color: var(--link); }
+  .prosa a:hover { text-decoration-thickness: 2px; }
+
+  /* 4. L'elenco puntato. `.valori` non e' un elenco, e' una fila di
+        pastiglie: va bene per due parole, non per «Foto del veicolo,
+        salvate nella memoria privata dell'app». Qui servono voci di prosa,
+        una per riga, con il punto. */
+  .punti {
+    margin: .2rem 0 0;
+    padding-left: 1.15rem;
+    display: grid;
+    gap: .45rem;
+    color: var(--testo-tenue);
+    max-width: 58ch;
+  }
+
+  .punti li { padding-left: .2rem; }
+  .punti li::marker { color: var(--azzurro); }
+
+
+  /* --- Aggiunte del 05/09 (Pam), due sole cose ---------------------------
+     1. Il nome piu' grande e composto meglio: e' la richiesta di Davide.
+     2. Cinque righe perche' lo switch di lingua di Jim (.lingue) funzioni
+        anche con dei <button>, che servono SOLO nella pagina di anteprima:
+        li' le tre lingue stanno in un indirizzo unico e si cambiano senza
+        cambiare pagina. Non tocco .lingue: la estendo. */
+  .marchio {
+    font-size: clamp(1.4rem, 4.6vw, 1.9rem);
+    font-weight: 800;
+    letter-spacing: -.03em;
+    gap: .7rem;
+    flex-wrap: wrap;
+    row-gap: .9rem;
+    margin-bottom: clamp(2rem, 6vw, 3.25rem);
+  }
+  .marchio img { width: 46px; height: 46px; border-radius: 11px; }
+
+  .lingue button {
+    font: inherit;
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #C3CEE6;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, .35);
+  }
+  .lingue button:hover { color: #FFFFFF; }
+  .lingue button:focus-visible { outline: 2px solid var(--azzurro); outline-offset: 2px; }</style>
 </head>
 <body>
-    <div class="lang"><a href="privacy.html">🇮🇹 Italiano</a> · <strong>🇬🇧 English</strong> · <a href="privacy_de.html">🇩🇪 Deutsch</a></div>
-    <h1>DrivePulse Privacy Policy</h1>
-    <p>Last updated: 5 September 2026</p>
 
-    <div class="highlight">
-        <strong>In short:</strong> DrivePulse is an "Offline by Design" app. We do not collect, transmit or sell any of your data: your trips never reach us, because there is no server of ours. The only copy that can leave the phone is your iPhone’s own iCloud backup, which is yours and which you control from the app settings. On Android not even that: the app is excluded from the system backup.
+<header class="apertura">
+  <svg class="quadrante" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+    <circle cx="200" cy="200" r="188" stroke="#00B0F0" stroke-width="1" opacity=".25"></circle>
+    <circle cx="200" cy="200" r="150" stroke="#00A878" stroke-width="3"
+            stroke-dasharray="330 943" transform="rotate(-210 200 200)" opacity=".8"></circle>
+    <circle cx="200" cy="200" r="112" stroke="#FFFFFF" stroke-width="1" opacity=".18"></circle>
+  </svg>
+  <div class="involucro">
+    <div class="marchio">
+      <img src="data:image/png;base64,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" alt="" width="46" height="46">
+      DrivePulse
     </div>
 
-    <h2>1. No cloud data collection</h2>
-    <p>DrivePulse does not require creating an account. There is no central database or cloud server to which your driving data, GPS location or vehicle information is sent.</p>
+    <div class="lingue"><a href="privacy.html">Italiano</a> <span>&middot;</span> <strong>English</strong> <span>&middot;</span> <a href="privacy_de.html">Deutsch</a></div>
 
-    <h2>2. Locally stored data</h2>
-    <p>All information collected via the OBD2 adapter and the phone sensors (GPS, accelerometer) is stored exclusively in the local database on your device. This data includes:</p>
-    <ul>
+    <p class="occhiello">Privacy</p>
+    <h1>DrivePulse Privacy Policy</h1>
+    <p class="sommario"><strong>In short:</strong> DrivePulse is an "Offline by Design" app. We do not collect, transmit or sell any of your data: your trips never reach us, because there is no server of ours. The only copy that can leave the phone is your iPhone’s own iCloud backup, which is yours and which you control from the app settings. On Android not even that: the app is excluded from the system backup.</p>
+
+    <div class="azioni">
+      <a class="bottone" href="mailto:support@drivepulse.it">support@drivepulse.it</a>
+      <p class="postilla">Last updated: 5 September 2026</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="involucro">
+    <div class="elenco">
+      <div>
+        <h3>1. No cloud data collection</h3>
+        <div class="prosa"><p>DrivePulse does not require creating an account. There is no central database or cloud server to which your driving data, GPS location or vehicle information is sent.</p></div>
+      </div>
+      <div>
+        <h3>2. Locally stored data</h3>
+        <div class="prosa"><p>All information collected via the OBD2 adapter and the phone sensors (GPS, accelerometer) is stored exclusively in the local database on your device. This data includes:</p>
+    <ul class="punti">
         <li>Trip routes and parking locations.</li>
         <li>Technical engine data (RPM, speed, temperatures).</li>
         <li>Diagnostic trouble codes (DTC).</li>
         <li>Vehicle information (VIN, make, model).</li>
         <li>Vehicle photos (saved in the app's private storage).</li>
-    </ul>
-
-    <h2>3. Use of Location</h2>
-    <p>The app asks for location access so it can record trips on its own, even with the screen off. On iPhone this requires the "Always" permission; on Android the app records only while the trip is running and never asks for background location. The track points stay in the database on your phone and are used to compute distances and draw maps. <strong>They do not reach us: there is no server of ours.</strong> Two things do leave the phone, though, and we would rather say so. To write the street name of a trip or a parking spot, the phone asks the <strong>operating system's map services</strong> for the address (Apple on iPhone, Google on Android). To draw the map it downloads <strong>tiles</strong> from <strong>CARTO</strong>, and asking for a tile tells them which area you are looking at. Neither request carries anything beyond the coordinates: not your name, not an identifier of yours, not your trip history.</p>
-
-    <h2>4. How the adapter connects</h2>
-    <p>The OBD2 adapter (ELM327) is reached <strong>locally</strong>, without going through the internet: over Bluetooth LE, over Wi-Fi to the adapter itself, and on Android also over classic Bluetooth. The only requests the app sends to the network are the ones described in section 3, plus Apple's and Google's stores for the purchase.</p>
-
-    <h2>5. In-App Purchases</h2>
-    <p>DrivePulse uses Apple's in-app purchase system (StoreKit) for the Lifetime license. Transactions are handled entirely by Apple and the developer neither receives nor stores any payment data. The purchase receipt is managed by your Apple ID.</p>
-
-    <h2>6. Your rights</h2>
-    <p>Since all data resides on your phone, you have full control: you can export it via the backup feature or delete it permanently by removing the app or using the "Delete all data" function in settings.</p>
-
-    <h2>7. Safety and responsibility</h2>
-    <div class="highlight" style="background:#fff5f5;border-left-color:#d00000;">
-        <strong>Never look at or use the phone while driving.</strong> Consult DrivePulse only when the vehicle is stopped. The driver is solely responsible for safe driving and for complying with laws on phone use while driving. The values shown are <strong>informational estimates</strong> and <strong>do not replace a mechanic</strong>; the app is <strong>read-only</strong> and does not modify the vehicle. For the full terms and limitation of liability, see the <a href="support_en.html">Support</a> page.
+    </ul></div>
+      </div>
+      <div>
+        <h3>3. Use of Location</h3>
+        <div class="prosa"><p>The app asks for location access so it can record trips on its own, even with the screen off. On iPhone this requires the "Always" permission; on Android the app records only while the trip is running and never asks for background location. The track points stay in the database on your phone and are used to compute distances and draw maps. <strong>They do not reach us: there is no server of ours.</strong> Two things do leave the phone, though, and we would rather say so. To write the street name of a trip or a parking spot, the phone asks the <strong>operating system's map services</strong> for the address (Apple on iPhone, Google on Android). To draw the map it downloads <strong>tiles</strong> from <strong>CARTO</strong>, and asking for a tile tells them which area you are looking at. Neither request carries anything beyond the coordinates: not your name, not an identifier of yours, not your trip history.</p></div>
+      </div>
+      <div>
+        <h3>4. How the adapter connects</h3>
+        <div class="prosa"><p>The OBD2 adapter (ELM327) is reached <strong>locally</strong>, without going through the internet: over Bluetooth LE, over Wi-Fi to the adapter itself, and on Android also over classic Bluetooth. The only requests the app sends to the network are the ones described in section 3, plus Apple's and Google's stores for the purchase.</p></div>
+      </div>
+      <div>
+        <h3>5. In-App Purchases</h3>
+        <div class="prosa"><p>DrivePulse uses Apple's in-app purchase system (StoreKit) for the Lifetime license. Transactions are handled entirely by Apple and the developer neither receives nor stores any payment data. The purchase receipt is managed by your Apple ID.</p></div>
+      </div>
+      <div>
+        <h3>6. Your rights</h3>
+        <div class="prosa"><p>Since all data resides on your phone, you have full control: you can export it via the backup feature or delete it permanently by removing the app or using the "Delete all data" function in settings.</p></div>
+      </div>
     </div>
+  </section>
 
-    <h2>8. Contact</h2>
-    <p>For privacy questions you can write to: <strong>support@drivepulse.it</strong></p>
+  <section class="involucro">
+    <div class="avviso">
+      <h3>Safety and responsibility</h3>
+      <p><strong>Never look at or use the phone while driving.</strong> Consult DrivePulse only when the vehicle is stopped. The driver is solely responsible for safe driving and for complying with laws on phone use while driving. The values shown are <strong>informational estimates</strong> and <strong>do not replace a mechanic</strong>; the app is <strong>read-only</strong> and does not modify the vehicle. For the full terms and limitation of liability, see the <a href="support_en.html">Support</a> page.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="chiusura">
+  <div class="involucro">
+    <h2>Contact</h2>
+    <p>For privacy questions you can write to:</p>
+    <a class="bottone" href="mailto:support@drivepulse.it">support@drivepulse.it</a>
+  </div>
+</footer>
+
 </body>
 </html>
