@@ -15,10 +15,10 @@
 <body>
     <div class="lang"><a href="privacy.html">🇮🇹 Italiano</a> · <a href="privacy_en.html">🇬🇧 English</a> · <strong>🇩🇪 Deutsch</strong></div>
     <h1>Datenschutzerklärung von DrivePulse</h1>
-    <p>Stand: Juni 2026</p>
+    <p>Stand: 5. September 2026</p>
 
     <div class="highlight">
-        <strong>Kurz gesagt:</strong> DrivePulse ist eine „Offline by Design"-App. Wir erheben, übertragen und verkaufen keine Ihrer Daten: Ihre Fahrten erreichen uns nie, denn einen Server von uns gibt es nicht. Die einzige Kopie, die das Telefon verlassen kann, ist das iCloud-Backup Ihres iPhones, das Ihnen gehört und das Sie in den App-Einstellungen steuern.
+        <strong>Kurz gesagt:</strong> DrivePulse ist eine „Offline by Design"-App. Wir erheben, übertragen und verkaufen keine Ihrer Daten: Ihre Fahrten erreichen uns nie, denn einen Server von uns gibt es nicht. Die einzige Kopie, die das Telefon verlassen kann, ist das iCloud-Backup Ihres iPhones, das Ihnen gehört und das Sie in den App-Einstellungen steuern. Unter Android nicht einmal das: Die App ist vom System-Backup ausgeschlossen.
     </div>
 
     <h2>1. Keine Datenerfassung in der Cloud</h2>
@@ -35,10 +35,10 @@
     </ul>
 
     <h2>3. Nutzung des Standorts</h2>
-    <p>Die App fordert den Standortzugriff „Immer" ausschließlich an, um die <strong>automatische Aufzeichnung der Fahrten</strong> im Hintergrund zu ermöglichen. Diese GPS-Daten werden nur innerhalb der App verwendet, um Entfernungen zu berechnen und Karten anzuzeigen. Es werden keine Standortdaten an Dritte oder an den Entwickler weitergegeben.</p>
+    <p>Die App fragt den Standortzugriff an, um Fahrten selbstst&auml;ndig aufzuzeichnen, auch bei ausgeschaltetem Bildschirm. Auf dem iPhone ist daf&uuml;r die Berechtigung &bdquo;Immer&ldquo; n&ouml;tig; unter Android zeichnet die App nur w&auml;hrend der laufenden Fahrt auf und fragt den Standort im Hintergrund gar nicht ab. Die Streckenpunkte bleiben in der Datenbank auf Ihrem Telefon und dienen dazu, Entfernungen zu berechnen und Karten anzuzeigen. <strong>Zu uns gelangen sie nicht: einen Server von uns gibt es nicht.</strong> Zwei Dinge verlassen das Telefon allerdings, und das sagen wir lieber. Um den Stra&szlig;ennamen einer Fahrt oder eines Parkplatzes zu schreiben, fragt das Telefon die <strong>Kartendienste des Betriebssystems</strong> nach der Adresse (Apple auf dem iPhone, Google unter Android). Um die Karte zu zeichnen, l&auml;dt es <strong>Kartenkacheln</strong> von <strong>CARTO</strong>, und eine Kachel anzufordern verr&auml;t, welchen Ausschnitt Sie gerade ansehen. In beiden F&auml;llen wird nichts au&szlig;er den Koordinaten &uuml;bertragen: nicht Ihr Name, keine Kennung von Ihnen, nicht Ihr Fahrtenverlauf.</p>
 
-    <h2>4. Bluetooth-Kommunikation</h2>
-    <p>Bluetooth wird ausschließlich für die lokale Kommunikation mit Ihrem OBD2-Adapter (ELM327) verwendet. Es werden keine weiteren Verbindungen aufgebaut.</p>
+    <h2>4. Wie sich der Adapter verbindet</h2>
+    <p>Der OBD2-Adapter (ELM327) wird <strong>lokal</strong> erreicht, ohne Umweg &uuml;ber das Internet: per Bluetooth LE, per WLAN zum Adapter selbst und unter Android auch per klassischem Bluetooth. Die einzigen Anfragen, die die App ins Netz sendet, sind die in Abschnitt 3 beschriebenen, dazu die Stores von Apple und Google f&uuml;r den Kauf.</p>
 
     <h2>5. In-App-Käufe</h2>
     <p>DrivePulse nutzt das In-App-Kaufsystem von Apple (StoreKit) für die Lifetime-Lizenz. Die Transaktionen werden vollständig von Apple abgewickelt; der Entwickler erhält und speichert keine Zahlungsdaten. Der Kaufbeleg wird über Ihre Apple-ID verwaltet.</p>

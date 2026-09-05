@@ -15,10 +15,10 @@
 <body>
     <div class="lang"><a href="privacy.html">🇮🇹 Italiano</a> · <strong>🇬🇧 English</strong> · <a href="privacy_de.html">🇩🇪 Deutsch</a></div>
     <h1>DrivePulse Privacy Policy</h1>
-    <p>Last updated: June 2026</p>
+    <p>Last updated: 5 September 2026</p>
 
     <div class="highlight">
-        <strong>In short:</strong> DrivePulse is an "Offline by Design" app. We do not collect, transmit or sell any of your data: your trips never reach us, because there is no server of ours. The only copy that can leave the phone is your iPhone’s own iCloud backup, which is yours and which you control from the app settings.
+        <strong>In short:</strong> DrivePulse is an "Offline by Design" app. We do not collect, transmit or sell any of your data: your trips never reach us, because there is no server of ours. The only copy that can leave the phone is your iPhone’s own iCloud backup, which is yours and which you control from the app settings. On Android not even that: the app is excluded from the system backup.
     </div>
 
     <h2>1. No cloud data collection</h2>
@@ -35,10 +35,10 @@
     </ul>
 
     <h2>3. Use of Location</h2>
-    <p>The app requests "Always" location access exclusively to enable <strong>automatic trip tracking</strong> in the background. This GPS data is used only within the app to compute distances and display maps. None of your location data is ever shared with third parties or with the developer.</p>
+    <p>The app asks for location access so it can record trips on its own, even with the screen off. On iPhone this requires the "Always" permission; on Android the app records only while the trip is running and never asks for background location. The track points stay in the database on your phone and are used to compute distances and draw maps. <strong>They do not reach us: there is no server of ours.</strong> Two things do leave the phone, though, and we would rather say so. To write the street name of a trip or a parking spot, the phone asks the <strong>operating system's map services</strong> for the address (Apple on iPhone, Google on Android). To draw the map it downloads <strong>tiles</strong> from <strong>CARTO</strong>, and asking for a tile tells them which area you are looking at. Neither request carries anything beyond the coordinates: not your name, not an identifier of yours, not your trip history.</p>
 
-    <h2>4. Bluetooth communication</h2>
-    <p>Bluetooth is used only to communicate locally with your OBD2 adapter (ELM327). No other connections are established.</p>
+    <h2>4. How the adapter connects</h2>
+    <p>The OBD2 adapter (ELM327) is reached <strong>locally</strong>, without going through the internet: over Bluetooth LE, over Wi-Fi to the adapter itself, and on Android also over classic Bluetooth. The only requests the app sends to the network are the ones described in section 3, plus Apple's and Google's stores for the purchase.</p>
 
     <h2>5. In-App Purchases</h2>
     <p>DrivePulse uses Apple's in-app purchase system (StoreKit) for the Lifetime license. Transactions are handled entirely by Apple and the developer neither receives nor stores any payment data. The purchase receipt is managed by your Apple ID.</p>
